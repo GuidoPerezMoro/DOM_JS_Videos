@@ -52,7 +52,7 @@ const lista2 = document.querySelectorAll(".border-grey") //Memoria estática
 
 
 //-------------------------VIDEO 2: ELEMENTOS DINÁMICOS-------------------------
-/* 
+/*
 
 
 //CREAR
@@ -128,6 +128,61 @@ section.toggle('clase')
 */ /*
 
 ----------------------------FIN VIDEO----------------------------*/
+
+
+//----------------------------VIDEO 3: EVENTOS----------------------------
+/*
+//Handler
+function clickTitulo() {
+    console.log("El usuario hizo clic en el título");
+}
+//Listener
+const tituloFormulario = document.getElementById('tituloForm');
+
+//tituloFormulario.onclick = clickTitulo;
+tituloFormulario.addEventListener("click",clickTitulo);
+//tituloFormulario.removeEventListener("click",clickTitulo);
+
+//Handler para examinar evento
+//function clickTitulo(event) {console.log(event);}
+
+//Evento que obliga a esperar que el html se cargue completamente
+//antes de acceder a sus elementos
+document.addEventListener("DOMContentLoaded", () => {
+    console.log("El documento se ha cargado");
+});
+*/
+
+//MANEJO DE FORMULARIOS
+const form = document.querySelector('#formulario');
+/*const enviarFormulario = (ev) => {
+    ev.preventDefault();
+    console.log(ev);
+}*/
+/*const enviarFormulario = (ev) => {
+    ev.preventDefault();
+    console.log(ev.target.name, ev.target.email, ev.target.password);
+}*/
+const enviarFormulario = (ev) => {
+    ev.preventDefault();
+
+    const{name, email, password} = ev.target;
+
+    console.log(
+        name.value,
+        email.value,
+        password.value);
+    if (name.value.length === 0) alert("El nombre no es válido");
+}
+form.addEventListener("submit", enviarFormulario);
+
+
+
+
+
+
+
+
 
 
 
