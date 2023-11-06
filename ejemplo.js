@@ -48,7 +48,7 @@ document.parentElement //null
 const lista1 = document.getElementsByClassName("border-grey") //Memoria dinámica
 const lista2 = document.querySelectorAll(".border-grey") //Memoria estática
 
-----------------------------FIN VIDEO----------------------------*/
+//----------------------------FIN VIDEO----------------------------*/
 
 
 //-------------------------VIDEO 2: ELEMENTOS DINÁMICOS-------------------------
@@ -127,7 +127,7 @@ section.classList.add('nueva-clase')
 section.toggle('clase')
 */ /*
 
-----------------------------FIN VIDEO----------------------------*/
+//----------------------------FIN VIDEO----------------------------*/
 
 
 //----------------------------VIDEO 3: EVENTOS----------------------------
@@ -137,7 +137,7 @@ function clickTitulo() {
     console.log("El usuario hizo clic en el título");
 }
 //Listener
-const tituloFormulario = document.getElementById('tituloForm');
+const tituloFormulario = document.getElementById('titulo-formulario');
 
 //tituloFormulario.onclick = clickTitulo;
 tituloFormulario.addEventListener("click",clickTitulo);
@@ -151,7 +151,7 @@ tituloFormulario.addEventListener("click",clickTitulo);
 document.addEventListener("DOMContentLoaded", () => {
     console.log("El documento se ha cargado");
 });
-*/
+
 
 //MANEJO DE FORMULARIOS
 const form = document.querySelector('#formulario');
@@ -162,11 +162,11 @@ const form = document.querySelector('#formulario');
 /*const enviarFormulario = (ev) => {
     ev.preventDefault();
     console.log(ev.target.name, ev.target.email, ev.target.password);
-}*/
+}*//*
 const enviarFormulario = (ev) => {
     ev.preventDefault();
 
-    const{name, email, password} = ev.target;
+    const { name, email, password } = ev.target;
 
     console.log(
         name.value,
@@ -175,32 +175,28 @@ const enviarFormulario = (ev) => {
     if (name.value.length === 0) alert("El nombre no es válido");
 }
 form.addEventListener("submit", enviarFormulario);
+*/
+//--------------------------------FIN VIDEO--------------------------------
 
 
+//----------------------------VIDEO 4: BUBBLING----------------------------
+/*
+const tituloForm = document.querySelector('#titulo-formulario');
+tituloForm.addEventListener("click", (ev) => {
+    // console.log(ev.bubbles, ev.cancelBubble);
+    // ev.stopPropagation();
+    // console.log(ev.bubbles, ev.cancelBubble);
+    console.log("CLICK EN EL TÍTULO");
+});
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+const seccionForm = document.querySelector('#seccion-formulario');
+seccionForm.addEventListener("click",
+    (ev) => {
+        console.log("CLICK EN LA SECCIÓN");
+        // console.log(ev.target, ev.currentTarget);
+    },
+    {
+        capture: true
+    }
+);
+*/
