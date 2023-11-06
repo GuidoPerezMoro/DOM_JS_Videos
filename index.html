@@ -20,9 +20,36 @@
       <li><a href="#">Enlace 3</a></li>
     </ul>
   </nav>
+
   <main id="main">
+    <section class="border-grey">
+      <!--onclick="clickTitulo()"-->
+      <h2 id="tituloForm" Formulario de registro</h2>
+      <form class="border-grey register-form" action="procesar_registro.php" method="post">
+        <input type="text" id="nombre" name="nombre" placeholder="Nombre"/>
+        <input type="email" id="email" name="email" placeholder="Email"/>
+        <input type="password" id="password" name="password" placeholder="Contraseña"/>
+        <button>Registrarme</button>
+      </form>
+    </section>
+
     <section id="section" class="border-grey">
-      <h2>Sección Principal</h2>
+      <h2>Blog</h2>
+      <article class="border-grey">
+        <h3>Título del Artículo</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua.</p>
+      </article>
+      <article class="border-grey">
+        <h3>Título del Artículo</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua.</p>
+      </article>
+      <article class="border-grey">
+        <h3>Título del Artículo</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua.</p>
+      </article>
       <article class="border-grey">
         <h3>Título del Artículo</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore
@@ -30,6 +57,7 @@
       </article>
     </section>
   </main>
+
   <footer class="border-grey">
     <p>Pie de Página</p>
   </footer>

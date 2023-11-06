@@ -1,4 +1,5 @@
-//----------------------------VIDEO 1----------------------------
+//----------------------------VIDEO 1: DOM----------------------------
+
 /*
 // DOCUMENTO
 console.log(document)
@@ -35,22 +36,114 @@ console.log(document.querySelectorAll("[name=cabecera]"))
 // ELEMENTOS
 const elemento = document.getElementById("header")
 
-// CONSOLA NAVEGADOR
-//elemento.children
-//document.children
-//elemento.parentElement
-//document.parentElement //null
-
+// CONSOLA
+/*
+elemento.children
+document.children
+elemento.parentElement
+document.parentElement //null
+*/ /*
 
 // TIPOS DE LISTAS
 const lista1 = document.getElementsByClassName("border-grey") //Memoria dinámica
 const lista2 = document.querySelectorAll(".border-grey") //Memoria estática
 
-// CONSOLA NAVEGADOR
-//lista1
-//lista2
+----------------------------FIN VIDEO----------------------------*/
 
+
+//-------------------------VIDEO 2: ELEMENTOS DINÁMICOS-------------------------
+/* 
+
+
+//CREAR
+//Etiqueta
+const titulo2 = document.createElement("h2");
+//Texto
+const textoTitulo2 = document.createTextNode("Nuevo título");
+//Comentario
+const cometario = document.createComment("Nuevo comentario");
+
+
+//CLONAR
+const articulo = document.querySelector("article");
+//Consola: articulo.cloneNode() (Sin hijos)
+//Consola: articulo.cloneNode(true) (Con hijos)
+
+//VERIFICAR SI UN ARTÍCULO ESTÁ CONECTADO AL HTML
+articulo2 = articulo.cloneNode(true);
+//Consola: articulo2.isConnected
+
+
+//INSERTAR
+const section = document.getElementById("section");
+//ELEMENTO
+//Consola
+/*
+section.appendChild(articulo2)
+section.insertAdjacentElement('beforebegin',articulo2)
+section.insertAdjacentElement('beforeend',articulo2)
+section.insertAdjacentElement('afterbegin',articulo2)
+section.insertAdjacentElement('afterend',articulo2)
 */
+//TEXTO
+//Consola
+/*
+section.insertAdjacentText('beforebegin','Texto a insertar')
+section.insertAdjacentText('beforeend','Texto a insertar')
+section.insertAdjacentText('afterbegin','Texto a insertar')
+section.insertAdjacentText('afterend','Texto a insertar')
+*/
+//ELEMENTO HTML
+//Consola
+/*
+section.insertAdjacentHTML('beforebegin','<h3>Esto es un título inventado</h3>')
+section.insertAdjacentHTML('beforeend','<h3>Esto es un título inventado</h3>')
+section.insertAdjacentHTML('afterbegin','<h3>Esto es un título inventado</h3>')
+section.insertAdjacentHTML('afterend','<h3>Esto es un título inventado</h3>')
+*/
+
+
+//QUITAR
+//Consola: section.remove()
+
+
+//MODIFICAR
+//Consola
+/*
+section.innerHTML
+section.innerHTML = '<h3>Nuevo título de sección</h3>'
+section.outerHTML
+section.outerHTML = '<h3>Nuevo título de sección</h3>'
+section.children[0].textContent = 'Otro título más'
+//Get
+section.getAttribute('id')
+//Set
+section.setAttribute('nombre','otro-valor')
+//Lista de clases
+section.classList //Como lista
+section.className //Como string
+section.className += ' nueva-clase'
+section.classList.add('nueva-clase')
+section.toggle('clase')
+*/ /*
+
+----------------------------FIN VIDEO----------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
